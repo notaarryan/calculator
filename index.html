@@ -4,11 +4,45 @@
 <head>
     <meta charset="UTF-8">
     <title>Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&family=WDXL+Lubrifont+TC&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css">
 </head>
 
 <body>
+    <div class="container">
+        <div class="calculator">
+            <div class="display">
 
+            </div>
+            <div class="button-container">
+                <div class="numbers">
+                    <button class="btn-number" id="1">1</button>
+                    <button class="btn-number" id="2">2</button>
+                    <button class="btn-number" id="3">3</button>
+                    <button class="btn-number" id="4">4</button>
+                    <button class="btn-number" id="5">5</button>
+                    <button class="btn-number" id="6">6</button>
+                    <button class="btn-number" id="7">7</button>
+                    <button class="btn-number" id="8">8</button>
+                    <button class="btn-number" id="9">9</button>
+                    <button class="btn-operator" id="op-decimal">.</button>
+                    <button class="btn-number" id="0">0</button>
+                    <button class="btn-operator" id="op-backspace"><img height="20px" width="20px"
+                            src="./images/backspace-icon-2048x1714-fco8gl58.png"></button>
+                    <button class="btn-operator" id="op-equals">=</button>
+                </div>
+                <div class="operators">
+                    <button class="btn-operator" id="op-ac">AC</button>
+                    <button class="btn-operator" id="op-divide">÷</button>
+                    <button class="btn-operator" id="op-multiply">X</button>
+                    <button class="btn-operator" id="op-substract">-</button>
+                    <button class="btn-operator" id="op-add">+</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="./script.js"></script>
 </body>
