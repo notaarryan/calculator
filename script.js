@@ -11,7 +11,6 @@ let multiply = (a, b) => {
 };
 
 let divide = (a, b) => {
-  console.log(a / b);
   return a / b;
 };
 
@@ -82,10 +81,37 @@ operations.forEach((op) => {
 equals.addEventListener("click", () => {
   result = operate(parseInt(num1), parseInt(num2), operator);
   if (num1 != "" && num2 != "" && operator != "") {
-    console.log(num1, num2);
     display.innerText = `${result}`;
     num1 = result.toString();
     num2 = "";
     operationCount = 0;
+  }
+});
+
+decimal.addEventListener("click", () => {
+  if (operationCount != 1) {
+    num1 += ".";
+    display.innerText = `${num1}`;
+  } else if (operationCount == 1) {
+    num2 += ".";
+    display.innerText = `${num1} ${operator} ${num2}`;
+  }
+});
+
+backspace.addEventListener("click", () => {
+  if (operationCount != 1) {
+    let numArr = num1.split("");
+    numArr.pop();
+    num1 = numArr.join("");
+    display.innerText = `${num1}`;
+  } else if (operationCount == 1 && num2 == "") {
+    operator = "";
+    operationCount = 0;
+    display.innerText = `${num1}`;
+  } else if (operationCount == 1 && num2 != "") {
+    let numArr = num2.split("");
+    numArr.pop();
+    num2 = numArr.join("");
+    display.innerText = `${num1} ${operator} ${num2}`;
   }
 });
